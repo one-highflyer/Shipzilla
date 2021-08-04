@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  backend:
+    image: python:3.7
+    container_name: ups_fee_calculation_backend_dev
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - 10000:10000
+    command: bash -c "sleep infinity"
+
+
+    

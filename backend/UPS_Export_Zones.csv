@@ -1,0 +1,251 @@
+﻿Country,Export zone,Import zone
+Afghanistan,7,10
+Aland Island(Finland),4,6
+Albania,7,8
+Algeria,6,9
+American Samoa,2,10
+Andoma,4,NS
+Angola,4,10
+Angullia,7,10
+Antigua and Barbuda,7,10
+Argentina,7,10
+Armenia,7,10
+Aruba,7,10
+Australlia,3,4
+Austria,4,5
+Azerbaijan,7,10
+Azores(Portugal),4,6
+Bahamas,7,10
+Bahrain,2,3
+Bangaladesh,1,1
+Barbados,7,10
+Belarus/Byelorussia,7,10
+Belgium,4,5
+Bellze,7,NS
+Benin,7,10
+Bermuda,7,10
+Bhutan,6,1
+Bolivia,7,10
+"Bonaire,St Eustatius,Saba",7,10
+Bosnia and Herzegovina,7,10
+Botswana,6,10
+Brazil,7,10
+British vergin Islands,7,10
+Brunei,1,1
+Buesingen(Germany),4,5
+Bulgaria,7,6
+Burkina Faso,6,10
+Burundi,6,10
+Cambodia,7,4
+Cameroon,6,10
+Campione/Lake Lugano(Italy),4,5
+Canada,5,7
+Canry Islands/ Spain,7,5
+CapeVerde,7,10
+Cayman Islands,7,10
+Central African Republic,6,NS
+Ceuta(Spain),4,5
+Chad,6,10
+Chile,7,10
+"China,Peoples Republic of",3,2
+Cambodia,7,10
+Comoros,7,10
+Congo(Brazzavillie),6,10
+"Congo,Democratic Republic of",6,10
+Cook Islands,2,NS
+Costa Rica,7,10
+Cote d'lvoire(Ivory Coast),7,10
+Croatia,7,6
+Cuba,7,10
+Curacao,7,10
+Cyprus,2,6
+Czech Republic,4,6
+Denmark,4,6
+Djibouti,6,10
+Dominica,7,10
+Dominican Republic,7,10
+Ecuador,7,10
+Egypt,2,9
+EI Salvador,7,10
+England (United Kingdom),3,5
+Equatoria Guinea,7,10
+Eritrea,7,10
+Estonia,7,6
+Ethiopia,6,10
+Farcoe Islands,7,NS
+Fiji,2,10
+Finland,4,6
+France,4,5
+French Guiana,7,NS
+French Polynesia,2,10
+Gabon,6,10
+Gambia,6,10
+Georgia,7,8
+Germany,4,5
+Ghana,6,10
+Gibraltar,4,10
+Greece,4,6
+Greenland,7,NS
+Grenada,7,10
+Guadeloupe,7,10
+Guam,2,10
+Guatemala,7,10
+Guemsey(Channel Islands),4,10
+Guinea,6,10
+Guinea-Bissau,6,10
+Guyana,7,10
+Haiti,7,10
+Heligoland(Germany),4,5
+Honduras,7,10
+Hong Kong,1,2
+Hungary,4,6
+Iceland,4,8
+India,1,1
+Indonesia,1,1
+Iraq,2,10
+"Ireland,Republic of",4,6
+Israel,2,8
+Italy,4,5
+Jamaica,7,10
+Japan,3,4
+Jersey(Channel Islands),4,10
+Jordan,2,3
+Kazakhstan,7,10
+Kenya,6,10
+Kirghizia ( Kyrgysystan),7,10
+Kiribati,7,NS
+"Korea,South",3,4
+"Kosrae(Micronesia,Federated state of",2,NS
+Kuwait,2,3
+Laos,7,4
+Latvia,7,6
+Lebanon,6,3
+Lesotho,6,10
+Liberia,6,10
+Libyan Arab Jmahiriya,6,10
+Liechtenstein,4,6
+Lithuania,7,6
+Livigno(Italy),4,5
+Luxembourg,4,5
+Macau,1,2
+Macedonia(FYROM),7,10
+Madagascar,6,10
+Madeira(Portugal),4,6
+Malawi,6,10
+Malaysia,1,4
+Maldives,1,10
+Mali,6,10
+Malta,4,6
+Marshall Islands,7,NS
+Martinique,7,10
+Mauritania,6,10
+Mauritius,6,10
+Mayotte,7,10
+Melilla(Spain),4,NS
+Mexico,5,7
+"Micronesia,Federated state of ",2,NS
+Moldova,7,8
+Monaco(France),4,5
+Mongolia,4,10
+Montenegro,7,8
+Montserrat,7,10
+Morocco,6,9
+Mount Athos(Greece),4,6
+Mozambique,6,10
+Myanmar,7,4
+Nepal,1,1
+Netharlands(Holland),4,5
+New Calendonia,2,10
+New Zealand,1,4
+Nicaragua,7,10
+Niger,6,10
+Nigeria,6,9
+Norfolk Island(Asutralia),7,4
+Northern Ireland(United Kingdom),3,5
+Northern Mariana Islands,2,10
+Norway,4,8
+Oman,2,3
+Pakistan,3,1
+Palau,2,NS
+Panama,7,10
+Papua New Guinea ,2,NS
+Paraguay,7,10
+Peru,7,10
+Philippines,1,4
+Poland,4,6
+Ponape (Micronesia Federal State of),2,NS
+Portugal,4,6
+Puerto Rico,4,7
+Qatar,2,3
+Reunion Island,6,10
+Romania,7,6
+Rota(Northern Mariana Islands),2,10
+Russia,7,9
+Rwanda,6,10
+Saipan(Northern Mariana Islands),2,10
+Samoa,2,10
+San Marino,4,10
+,,
+Saudi Arabia,2,3
+Scotland (United Kingdom),3,5
+Senegal,6,10
+Serbia,7,8
+Seychelles,7,10
+,,
+Sierra Leone,6,10
+Singapore,1,1
+Slovakla,7,6
+Slovenia,7,6
+Solomon Islands,2,NS
+South Africa,6,9
+Spain,4,5
+St. Barthelemy,7,10
+St.Christopher(St.Kitts),7,10
+St.Croix (U.S Vergin Islands),7,10
+St.John(U.S Vergin Islands),7,10
+St.Kitts and Nevis,7,10
+St.Lucia,7,10
+"St. Maarten, St. Martin",7,10
+St.Thomas (U.S. Virgin Islands),7,10
+St. Vincent & the Grenadines,7,10
+Suriname,7,10
+Swaziland,6,10
+Swedan,4,6
+Switzerland,4,6
+Syrian Arab Republic,7,NS
+Tahiti (French Polynesia),2,10
+Taiwan,3,2
+Tajikistan,7,NS
+"Tanzania, United republic of",6,10
+Thailand,1,1
+Timor-Leste,2,NS
+Tinian (Northern Mariana Islands),2,10
+Togo,7,10
+Tonga,2,NS
+Tortola ( British Virgin Islands),7,10
+Trinidad & Tobago,7,10
+"Truk (Micronesia, Federated Status of)",2,NS
+Tunisia,6,9
+Turkey,4,8
+Turks & Caicos Islands,7,10
+Tuvalu,2,NS
+U.S. Virgin Islands,7,10
+Uganda,6,10
+Ukraine,7,8
+Union Islands (St. Vincent & the Grenadines),7,10
+United Arab Emirates,2,1
+United Kingdom,3,5
+United Status,5,7
+Uruguay,7,10
+Uzbekistan,7,10
+Vanuatu,2,NS
+Vatican City (Italy),4,5
+Venezuela,7,10
+Vietnam,7,4
+Virgin Gorda (British Virgin Islands),7,10
+Wales (United Kingdom),3,5
+Wallis & Futuna Islands,2,NS
+"Yap (Micronesia, Federated Status of)",2,NS
+"Yeman, Republic of",6,10
+Zambia,6,10
+Zimbabwe,6,10

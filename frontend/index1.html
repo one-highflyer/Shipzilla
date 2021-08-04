@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UPS Price Calculation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: cornflowerblue;
+            color: white;
+            text-align: center;
+        }
+
+        input {
+            width: 20%;
+            border-radius: 5px;
+            border-width: 3px;
+            text-align: center;
+            /* border-color: cornflowerblue; */
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var dollar_rate = document.getElementById("dollar_rate");
+            var length = document.getElementById("length");
+            var width = document.getElementById("width");
+            var height = document.getElementById("height");
+            var real_weight = document.getElementById("real-weight");
+            let export_zones = document.getElementById("export_zones");
+            let export_zone_number = document.getElementById("export_zone_number");
+            let volumetric_weight = document.getElementById("volumetric-weight");
+            let calBtn = document.getElementById("btn");
+            let zone_weight_price_documents = document.getElementById("zone-weight-price-documents");
+            let zone_weight_price_packages = document.getElementById("zone-weight-price-packages");
+            let estimated_fee_documents = document.getElementById("estimated-fee-documents");
+            let estimated_fee_packages = document.getElementById("estimated-fee-packages");
+
+            // Retrieve export zones
+            // var requestURL = 'http://192.168.1.110:10000/get_export_zones';
+            var requestURL = '/api/get_export_zones';
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            request.onload = function () {
+                var response = request.response;
+                for (let zone of response.export_zones) {
+                    let option = document.createElement("option");
+                    option.text = zone[0];
+                    option.value = zone[1];
+                    export_zones.appendChild(option);
+                }
+            }
+            // end retrieving export zones
+
+            calBtn.onclick = function () {
+                var dollar_rate_value = parseFloat(dollar_rate.value);
+                var volumetric_weight_value = parseFloat(length.value) * parseFloat(width.value) * parseFloat(height.value) / 5000;
+                var real_weight_value = parseFloat(real_weight.value);
+                var weight_for_calculation = 0;
+
+                volumetric_weight.innerHTML = volumetric_weight_value;
+                console.log(`volumetric_weight_value ${volumetric_weight_value}, dollar_rate_value ${dollar_rate_value}`)
+
+                if (isNaN(volumetric_weight_value)) {
+                    alert("Invalid box size")
+                } else if (isNaN(dollar_rate_value)) {
+                    alert("Invalid Dollar Rate")
+                }
+
+                if (volumetric_weight_value < real_weight_value) {
+                    weight_for_calculation = real_weight_value;
+                } else {
+                    weight_for_calculation = volumetric_weight_value;
+                }
+
+                // var requestURL = 'http://192.168.1.110:10000/calculateFee';
+                var requestURL = '/api/calculateFee';
+                var request = new XMLHttpRequest();
+                var params = "export";
+                request.open('POST', requestURL);
+                request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                request.responseType = 'json';
+                // console.log(`Current zone value is ${export_zones.value}`); // for test purpose only
+                request.send(JSON.stringify({ "weight": weight_for_calculation, "zone": export_zones.value }));
+                request.onload = function () {
+                    var response = request.response;
+                    const fuel_surcharge_rate = 0.125;
+                    console.log(response); 
+                    zone_weight_price_documents.innerHTML = (response["price_by_using_document"] * (1 + fuel_surcharge_rate)).toFixed(2);
+                    zone_weight_price_packages.innerHTML = (response["price_by_using_package"] * (1 + fuel_surcharge_rate)).toFixed(2);
+                    estimated_fee_documents.innerHTML = (((response["price_by_using_document"] * (1 + fuel_surcharge_rate)).toFixed(2)) * dollar_rate_value).toFixed(2);
+                    estimated_fee_packages.innerHTML = (((response["price_by_using_package"] * (1 + fuel_surcharge_rate)).toFixed(2)) * dollar_rate_value).toFixed(2);
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function onSelectExportZones(e) {
+            console.log(e.options[e.selectedIndex].text, "Export Zone", e.options[e.selectedIndex].value)
+            // console.log(e.value)
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: cornflowerblue; font-weight: bold;">
+        <a class="navbar-brand" href="#" style="text-align: center; color: azure;">
+            <img src="favicon.png" width="30" height="30" class="d-inline-block align-top font-weight-bold" alt="">
+            &nbspUPS Shipping Price Calculator
+        </a>
+    </nav>
+
+    <h1 class="text-center"></h1>
+
+    <div class="text-center">
+        <h2>Dollar Rate</h2>
+        <input type="text" id='dollar_rate' autocomplete=off>
+        <h2>Height (in cm)</h2>
+        <input type="text" id='length' autocomplete=off>
+        <h2>Width (in cm)</h2>
+        <input id='width' autocomplete=off>
+        <h2>Length (in cm)</h2>
+        <input id='height' autocomplete=off>
+        <h2>Weight (in kg)</h2>
+        <input id='real-weight' autocomplete=off>
+        <h2>Select Export Zone</h2>
+        <select name="export_zones" id="export_zones" onchange="onSelectExportZones(this)">
+            <!-- <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option> -->
+        </select>
+        <h3 id='export_zone_number'></h3>
+        <h2>Calculation Result</h2>
+        Volumetric Weight - <span id='volumetric-weight'></span><br>
+        Zone Weight Price by UPS Documents (in Dollar) - <span id='zone-weight-price-documents'></span><br>
+        Estimate Fee (by UPS Documents, in Sri Lankan Rupee) - <span id='estimated-fee-documents'></span><br>
+        Zone Weight Price by UPS Packages (in Dollar) - <span id='zone-weight-price-packages'></span><br>
+        Estimate Fee (by UPS Packages, in Sri Lankan Rupee) - <span id='estimated-fee-packages'></span><br>
+        <button type="button" class="btn btn-primary" id='btn'>Calculate</button>
+    </div>
+
+    <div class="footer align-top">
+        <span>2021 | Conceptualised in 🇱🇰 Coded in 🇨🇳</span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
