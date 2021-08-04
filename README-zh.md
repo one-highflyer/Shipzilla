@@ -1,6 +1,6 @@
 # Shipzilla
 
-! [在此处输入图片描述] (https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png)
+![enter image description here](https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png?raw=true)
 
 
 
