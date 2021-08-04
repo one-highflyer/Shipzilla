@@ -1,12 +1,12 @@
 # Shipzilla
 
-! [在此处输入图片描述] (https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png?raw=true)
+! [在此处输入图片描述] (https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png)
 
 
 
 如您所知，我们无法查看从斯里兰卡向国外寄送包裹时所使用的快递服务的确切费用。尽管这些公司的网站上有价格计算器，但在线显示的价格通常与代理商所说的不同（更少/更多）。有几个原因。
 
- 1.燃油附加费
+ 1. 燃油附加费
  2. 美元的价值与卢比的比例
  3. 国区之间的手续费差异
 
