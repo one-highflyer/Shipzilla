@@ -2,6 +2,9 @@
 # Shipzilla
 
 ![enter image description here](https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png?raw=true)
+
+
+
 ඕගොල්ලෝ දැනටමත්  දන්නවා ඇති ලංකාවෙන් පිරටරට පාර්සලයක් යවනකොට අපි පාවිච්චි කරන courier services වලට යන වියදම හරියටම online බලාගන්න තැනක අපට නැහැ. ඒ ඒ ආයතන වල website වල price calculator එකක් දාල තිබ්බත් ගොඩක් වෙලාවට agent කෙනෙක් කියන ගානට වැඩ ගොඩක් වෙනස්. මේකට බලපාන හේතු කීපයක් තියනවා.
 
  1. Fuel Surcharge එක 
