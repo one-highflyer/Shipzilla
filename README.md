@@ -3,6 +3,8 @@
 
 ![enter image description here](https://github.com/HighFlyer-Global/Shipzilla/blob/main/shipzilla.png?raw=true)
 
+**[සිංහල](https://github.com/HighFlyer-Global/Shipzilla/blob/main/README-si.md)**
+
 
 
 As you already know, we do not have a place to look at the exact cost of the courier services we use when sending a parcel abroad from Sri Lanka. Even though there is a price calculator on the websites of those companies, often the prices displayed online are different (less / more) than what an agent says. There are several reasons for this.
