@@ -19,7 +19,7 @@ So we thought of writing a small web app for this formula as a solution to this.
 
 Currently the data is available only from the UPS courier. In the future we hope to add data from services like DHL and FedEx.
 
-## How to Contribute to this?
+## How to Contribute to this project?
 Contact us if you would like to contribute to this. We are currently looking forward to the support of these sectors.
 
 -Enter Manual Data (Update data between country zones).
