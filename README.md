@@ -7,9 +7,9 @@
 
 As you already know, we do not have a place to look at the exact cost of the courier services we use when sending a parcel abroad from Sri Lanka. Even though there is a price calculator on the websites of those companies, often the prices displayed online are different (less / more) than what an agent says. There are several reasons for this.
 
- 1.Fuel Surcharge
- 2.The value of the dollar in proportion to the rupee
- 3.Differences in handling charges between country zones
+ 1. Fuel Surcharge
+ 2. The value of the dollar in proportion to the rupee
+ 3. Differences in handling charges between country zones
 
 There are a lot of things like this.
 
